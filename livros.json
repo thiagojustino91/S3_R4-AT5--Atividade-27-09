@@ -1,0 +1,25 @@
+[
+    {
+        "id": 1,
+        "nome": "thiago",
+        "preco": 15
+    },
+    {
+        "id": 2,
+        "nome": "thiago",
+        "preco": 15,
+        "autor": "Bruno "
+    },
+    {
+        "id": 3,
+        "nome": "thiago",
+        "preco": 15,
+        "autor": ""
+    },
+    {
+        "id": 4,
+        "nome": "thiago",
+        "preco": 15,
+        "autor": "Bruno"
+    }
+]
