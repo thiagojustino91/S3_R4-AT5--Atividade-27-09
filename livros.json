@@ -1,25 +1,58 @@
 [
     {
         "id": 1,
-        "nome": "thiago",
-        "preco": 15
+        "Titulo": "O Nome do Vento ",
+        "Autor": "Patrick Rothfuss",
+        "AnoDePublicacao": 2007,
+        "QtdDeDisponivel": 8
     },
     {
         "id": 2,
-        "nome": "thiago",
-        "preco": 15,
-        "autor": "Bruno "
+        "Titulo": "O Olho do Mundo",
+        "Autor": "Robert Jordan",
+        "AnoDePublicacao": 2001,
+        "QtdDeDisponivel": 10
     },
     {
         "id": 3,
-        "nome": "thiago",
-        "preco": 15,
-        "autor": ""
+        "Titulo": "Do Mil ao Milhao",
+        "Autor": "Thiago Negri",
+        "AnoDePublicacao": 2003,
+        "QtdDeDisponivel": 15
     },
     {
         "id": 4,
-        "nome": "thiago",
-        "preco": 15,
-        "autor": "Bruno"
+        "Titulo": "Pai Rico Pai Pobre",
+        "Autor": "Robert",
+        "AnoDePublicacao": 1997,
+        "QtdDeDisponivel": 7
+    },
+    {
+        "id": 5,
+        "Titulo": "Mar Negro",
+        "Autor": "Arthur Vesc",
+        "AnoDePublicacao": 1998,
+        "QtdDeDisponivel": 18
+    },
+    {
+        "id": 6,
+        "Titulo": "Programando",
+        "Autor": "Thiago Justinio",
+        "AnoDePublicacao": 1991,
+        "QtdDeDisponivel": 11
+    },
+    {
+        "id": 7,
+        "Titulo": "Universo",
+        "Autor": "Oscar Pietro",
+        "AnoDePublicacao": 2002,
+        "QtdDeDisponivel": 12
+    },
+    {
+        "id": 8,
+        "Titulo": "Sem Olhar Para Tras",
+        "Autor": "Gulherme ",
+        "AnoDePublicacao": 2001,
+        "QtdDeDisponivel": 16
     }
 ]

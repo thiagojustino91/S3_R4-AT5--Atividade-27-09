@@ -10,13 +10,43 @@ app.use(express.json());
 
 if(!fs.existsSync(CAMINHO_ARQUIVO)) {
     fs.writeFileSync(CAMINHO_ARQUIVO,'[]');
-}
+} 
+
+app.get("/livros",(req,res) => {
+    try {
+        const data = fs.readFileSync('./livros.json','utf-8');
+
+        let livros = JSON.parse(data);
+
+        const { Titulo } = req.query;
+
+        if (Titulo) {
+             livros = livros.filter(livro =>
+                livro.Titulo.toLowerCase()
+                .includes(Titulo.toLowerCase())
+             )
+        }
+
+
+         res.status(200).json(livros);
+
+
+
+    } catch (error) {
+        console.error('Erro ao ler arquivo JSON', error);
+        res.status(500).json({ message: 'Erro interno no servidor' });
+
+    }
+
+});
+
+
 
 app.post("/livros", (req,res)=>{
     try {
-        const {nome,preco,autor,genero} = req.body;
+        const {Titulo,Autor,AnoDePublicacao,QtdDeDisponivel} = req.body;
 
-        if (nome == "" || nome == undefined || preco == undefined || autor == "" || autor  == undefined || genero == "" || genero == undefined || isNaN(preco)) {
+        if (Titulo == "" || Titulo == undefined || Autor == "" || Autor  == undefined || AnoDePublicacao  == "" || AnoDePublicacao == undefined || QtdDeDisponivel == "" || QtdDeDisponivel == undefined || isNaN (AnoDePublicacao) || isNaN (QtdDeDisponivel)) {
             return res.status(400).json({message:"Campos obrigatorios nao preenchidos!"});
 
         }
@@ -26,10 +56,10 @@ app.post("/livros", (req,res)=>{
 
         const novoLivro = {
             id: livros.length + 1,
-            nome,
-            preco,
-            autor,
-            genero
+            Titulo,
+            Autor,
+            AnoDePublicacao,
+            QtdDeDisponivel
 
         }
 
